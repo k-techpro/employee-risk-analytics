@@ -1,26 +1,22 @@
-# Employee Risk Analytics and Monitoring Dashboard
+# 🚀 Employee Risk Analytics Dashboard
 
-## Overview
-This project analyzes employee login and activity behavior to identify risky patterns, calculate risk scores, and detect anomalies.
+A data analytics project that monitors employee activity, calculates risk scores, detects anomalies, and visualizes insights through a dashboard.
 
-## Features
-- Data preprocessing
-- Feature engineering
-- Risk scoring
-- Anomaly detection using Isolation Forest
-- Flask dashboard for viewing results
-- Power BI integration support
+## 🔍 Key Features
+- Data Cleaning & Preprocessing
+- Exploratory Data Analysis (EDA)
+- Risk Scoring System
+- Anomaly Detection (Isolation Forest)
+- Flask Dashboard UI
+- Power BI Integration
 
-## Project Structure
-```bash
-employee-risk-analytics/
-│
-├── data/
-├── notebooks/
-├── src/
-├── dashboard/
-├── app/
-├── reports/
-├── requirements.txt
-├── README.md
-└── main.py
+## 🛠️ Tech Stack
+Python | Pandas | Scikit-learn | Flask | Power BI | Matplotlib
+
+## 📊 Output
+- Risk classification (Low, Medium, High)
+- Anomaly detection
+- Dashboard visualization
+
+- k-techpro
+- kombaiya
