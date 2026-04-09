@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Risk Analytics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Risk Analytics Dashboard</h1>
+        <p class="subtitle">Behavior Monitoring and Anomaly Detection Overview</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h2>{{ total_employees }}</h2>
+                <p>Total Employees</p>
+            </div>
+            <div class="card">
+                <h2>{{ high_risk_count }}</h2>
+                <p>High Risk</p>
+            </div>
+            <div class="card">
+                <h2>{{ medium_risk_count }}</h2>
+                <p>Medium Risk</p>
+            </div>
+            <div class="card">
+                <h2>{{ low_risk_count }}</h2>
+                <p>Low Risk</p>
+            </div>
+            <div class="card">
+                <h2>{{ anomaly_count }}</h2>
+                <p>Anomalies Detected</p>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>Top Risky Employees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                        <th>Risk Score</th>
+                        <th>Risk Level</th>
+                        <th>Anomaly</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in records %}
+                    <tr>
+                        <td>{{ row.employee_name }}</td>
+                        <td>{{ row.department }}</td>
+                        <td>{{ row.risk_score }}</td>
+                        <td>{{ row.risk_level }}</td>
+                        <td>{{ row.anomaly }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
